@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: 'python:tir'
+    build:
+      context: ./
+      dockerfile: ./infra/docker/Dockerfile
+    ports:
+      - '3023:3023'
+    volumes:
+      - .:/app
